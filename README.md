@@ -1,5 +1,8 @@
 # jfresh
-Source code repository for Java basics onboarding classes
+Source code repository for Java basics onboarding cource 
+
+<img width="1536" alt="Screenshot 2021-07-09 at 6 15 50 PM" src="https://user-images.githubusercontent.com/1904958/125079871-babacd80-e0e1-11eb-8e6f-d09a3b8541a9.png">
+
 
 # Course Content
 
