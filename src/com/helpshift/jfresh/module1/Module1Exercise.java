@@ -1,4 +1,4 @@
-package com.helpshift.jfresh;
+package com.helpshift.jfresh.module1;
 
 import java.util.Map;
 import java.util.Scanner;

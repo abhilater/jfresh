@@ -1,4 +1,6 @@
-package com.helpshift.jfresh;
+package com.helpshift.jfresh.module1;
+
+import java.util.Date;
 
 /*
 Why Object Oriented
@@ -48,16 +50,25 @@ public class Module1 {
     char c = 'c';
 //    boolean	1
     boolean bool = true;
+    bool = false;
+    //System.out.println(bool);
 
 
      /* COMPLEX TYPES / REFERENCE TYPES
      ===================================
      Reference types are types that hold reference to Objects. An Object is an instance of a Java Class/Java Type
      eg java.util.Date is a Java Class/Type from the Java API/JDK, java.lang.String
+
+   Thread of execution which is part of Java process, the memory that each thread holds, is a Stack memory, Heap is shared memmory space someting which is shared by all threads
      */
+//     Date date = new Date();
+//    System.out.println(date);
+//    System.out.println(date.getTime());
+//    System.out.println(date.getClass());
+//    System.out.println(str.getClass());
 
 
-     /* AUTOBOXING
+     /* AUTOBOXING - UNBOXING
      ================================
 
      Each primitive data type has a Java class implementation eg. java.lang.Integer
@@ -65,7 +76,9 @@ public class Module1 {
      "class", "obj" ? we'll see later
      */
 
-//    Integer intObj = 1;
+//     int anInt = 1;
+//    Integer intObj = anInt;
+//    anInt = intObj; // unboxing
 //
 //    System.out.println("Class type of object intObj: " + intObj.getClass());
 //    System.out.println("Class type of object str: " + str.getClass());
@@ -83,13 +96,14 @@ public class Module1 {
      Variables which once defined cannot be redefined.
      eg calculating area of a circle
      */
+//    final float pi = 3.14f;
+//    int radius = 10;
+//    System.out.println("Area of a circile with " + pi*Math.pow(radius, 2));
 
 
 
     /*  CASTING / TYPE CONVERSION
      ===================================
-     Variables which once defined cannot be redefined.
-     eg calculating area of a circle
      */
 
 
