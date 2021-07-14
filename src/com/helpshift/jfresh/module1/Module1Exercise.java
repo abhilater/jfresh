@@ -9,7 +9,7 @@ public class Module1Exercise {
     startSimpleInterestCalculator();
   }
 
-  public static void startSimpleInterestCalculator(){
+  public static void startSimpleInterestCalculator() {
     boolean appRunning = true;
     // Reading inputs from command line
     Scanner scanner = new Scanner(System.in);
@@ -17,11 +17,12 @@ public class Module1Exercise {
     final Float ANNUAL_INTEREST_RATE = (Float) getUserInput(scanner, "Please enter annual interest rate: ", "FLOAT");
 
     while (appRunning) {
+
       Double principal = (Double) getUserInput(scanner, "Please enter principal: ", "DOUBLE");
 
       Integer timeInYears = (Integer) getUserInput(scanner, "Please enter time in years: ", "INTEGER");
 
-      Double simpleInterest = calcSimpleInterest(principal, ANNUAL_INTEREST_RATE, timeInYears);
+      double simpleInterest = calcSimpleInterest(principal, ANNUAL_INTEREST_RATE, timeInYears);
 
       String choice = (String) getUserInput(scanner, "Principal with SI for is: " + simpleInterest +
           "\nDo you want to continue? [Y/N]: ", "STRING");
@@ -45,7 +46,7 @@ public class Module1Exercise {
       case "STRING":
         return scanner.next();
       default:
-        System.out.println("Invalid Type, Exiting...");
+        System.out.println("Invalid Type");
         return null;
     }
   }
@@ -78,5 +79,9 @@ public class Module1Exercise {
     return null;
   }
 
-  // 3. Try to practise more problems here https://codingbat.com/java
+  // 3. Try to practise more problems here
+  //
+  // 1. https://www.codewars.com/collections/java-basics
+  // 2. https://exercism.io/my/tracks/java
+  // 3. https://codingbat.com/java
 }

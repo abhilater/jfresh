@@ -1,6 +1,10 @@
 package com.helpshift.jfresh.module1;
 
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /*
 Why Object Oriented
@@ -67,6 +71,11 @@ public class Module1 {
 //    System.out.println(date.getClass());
 //    System.out.println(str.getClass());
 
+//    Point p1 = new Point(1, 1);
+//    Point p2 = p1;
+//    p2.x = 2;
+//    System.out.println(p1);
+
 
      /* AUTOBOXING - UNBOXING
      ================================
@@ -105,14 +114,23 @@ public class Module1 {
     /*  CASTING / TYPE CONVERSION
      ===================================
      */
+//    float f1 = 3.14f;
+//    int i1 = (int)f1;
+//    double d1 = i1;
+//    System.out.println(i1);
+//    String str1 = "Hello";
+//    Object objRefToStr1 = str1;
+//    List<String> list = new ArrayList<>();
+//    list.add((String)objRefToStr1);
 
 
 
     /* JAVA MEMORY MODEL
     ================================
-      Primitives are created on "Stack" and Objects on "Heap"
+      Primitives are created on "Stack"/"Heap" and Objects on "Heap"
+      Heap memory is Garbage-Collectible
      */
-
+//
 //    int[] intArray = {1, 2, 3};
 //    System.out.println("Class type of object intArray: " + intArray.getClass());
 //
@@ -125,7 +143,7 @@ public class Module1 {
      ================================
      if-else if-else
      Ternary operator */
-
+//
 //    int count = 1;
 //    if (count > 1) {
 //      System.out.println("Count is higher than 1");
@@ -146,22 +164,22 @@ public class Module1 {
     ================================
      for, while, etc
       */
-    Integer[] integerArray = {1, 2, 3};
+//    Integer[] integerArray = {1, 2, 3};
 //    for(int index = 0; index < integerArray.length; index++){
 //      System.out.println(integerArray[index]);
 //    }
-
-    // or
+//
+//    // or
 //    for(Integer item : integerArray){
 //      System.out.println(item);
 //    }
-    // or
+//    // or
 //    int index = 0;
 //    while(index < integerArray.length) {
 //      System.out.println(integerArray[index++]);
 //    }
-
-    // or functional style (since Java 8+), DECLARATIVE VS IMPERATIVE PROGRAMMING
+//
+//    // or functional style (since Java 8+), DECLARATIVE VS IMPERATIVE PROGRAMMING
 //    Arrays.stream(integerArray).forEach(System.out::println);
 
 
@@ -171,7 +189,7 @@ public class Module1 {
     Makes code more readable and even more optimized at run-time than an if-else ladder
       */
 
-//    String animal = "TIGER";
+//    String animal = "DOG";
 //    String result;
 //    switch (animal) {
 //      case "DOG":
@@ -205,17 +223,23 @@ public class Module1 {
     7. throws RuntimeException : Lists of exceptions thrown by the method
       */
 
-//    printFullName("James", "Gosling");
-//    System.out.println(createFullName("James", "Gosling"));
+    printFullName("James", "Gosling");
+    System.out.println(createFullName("James", "Gosling"));
 
     // calling a static method
-//    Module1.printFullName("James", "Gosling");
+    Module1.printFullName("James", "Gosling");
 
     // calling an instance or object method
-//    Module1 module1 =  new Module1();
-//    System.out.println(module1.createFullNameUsingObject("James", "Gosling"));
+    Module1 module1 =  new Module1();
+    module1.printFullName("James", "Gosling");
+    System.out.println(module1.createFullNameUsingObject("james", "gosling"));
 
     // show overloading
+  }
+
+  int divide(int num, int denom) throws IllegalArgumentException {
+    if(denom == 0) throw new IllegalArgumentException("Divide by zero is not possible");
+    return num/denom;
   }
 
   public static void printFullName(String firstName, String lastName) {
